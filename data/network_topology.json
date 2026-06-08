@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {"id": "internet",  "label": "Internet",        "zone": "public",   "asset_sensitivity": "none",     "ip_range": "0.0.0.0/0"},
+    {"id": "dmz",       "label": "DMZ",              "zone": "dmz",      "asset_sensitivity": "medium",   "ip_range": "172.16.0.0/24"},
+    {"id": "internal",  "label": "Internal Network", "zone": "internal", "asset_sensitivity": "high",     "ip_range": "10.0.0.0/8"},
+    {"id": "admin",     "label": "Admin Zone",       "zone": "admin",    "asset_sensitivity": "critical", "ip_range": "10.0.1.0/24"},
+    {"id": "database",  "label": "Database Zone",    "zone": "database", "asset_sensitivity": "critical", "ip_range": "10.0.2.0/24"},
+    {"id": "external",  "label": "External Zone",    "zone": "external", "asset_sensitivity": "low",      "ip_range": "203.0.113.0/24"}
+  ],
+  "edges": [
+    {"from": "internet", "to": "dmz",      "allowed_ports": [80, 443, 22, 3389],          "label": "Internet to DMZ"},
+    {"from": "internet", "to": "external", "allowed_ports": [80, 443, 25, 22],            "label": "Internet to External"},
+    {"from": "dmz",      "to": "internal", "allowed_ports": [22, 8080, 443, 3389],        "label": "DMZ to Internal"},
+    {"from": "dmz",      "to": "database", "allowed_ports": [3306, 5432, 27017, 22],      "label": "DMZ to Database"},
+    {"from": "internal", "to": "admin",    "allowed_ports": [22, 3389, 2375, 6443],       "label": "Internal to Admin"},
+    {"from": "internal", "to": "database", "allowed_ports": [3306, 5432, 27017, 6379],    "label": "Internal to Database"},
+    {"from": "external", "to": "dmz",      "allowed_ports": [443, 22, 80],                "label": "External to DMZ"},
+    {"from": "admin",    "to": "database", "allowed_ports": [3306, 5432, 27017, 6379, 22],"label": "Admin to Database"}
+  ],
+  "attacker_entry_points": ["internet", "external"],
+  "high_value_targets": ["database", "admin"]
+}

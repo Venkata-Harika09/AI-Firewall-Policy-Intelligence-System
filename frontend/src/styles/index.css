@@ -1,0 +1,516 @@
+/* ================================================================
+   AI Firewall Policy Intelligence System
+   src/styles/index.css — Global Styles
+   ================================================================ */
+
+/* ── Google Fonts ───────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap");
+
+/* ── Tailwind Base ──────────────────────────────────────────────── */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================================================
+   BASE RESET
+   ================================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: #020810;
+  color: #b8d0ee;
+  font-family: "Syne", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================================================================
+   SCROLLBAR
+   ================================================================ */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #020810;
+}
+::-webkit-scrollbar-thumb {
+  background: #142240;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00d4ff44;
+}
+
+/* ================================================================
+   GLASS CARD
+   ================================================================ */
+.glass {
+  background: rgba(7, 15, 30, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid #142240;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(0, 212, 255, 0.05);
+}
+
+.glass-cyan {
+  border-color: rgba(0, 212, 255, 0.25);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.1),
+    inset 0 1px 0 rgba(0, 212, 255, 0.08);
+}
+
+.glass-red {
+  border-color: rgba(255, 45, 85, 0.25);
+  box-shadow: 0 0 20px rgba(255, 45, 85, 0.15);
+}
+
+.glass-green {
+  border-color: rgba(0, 230, 118, 0.25);
+  box-shadow: 0 0 20px rgba(0, 230, 118, 0.1);
+}
+
+.glass-orange {
+  border-color: rgba(255, 136, 0, 0.25);
+  box-shadow: 0 0 20px rgba(255, 136, 0, 0.1);
+}
+
+/* ================================================================
+   RISK BADGES
+   ================================================================ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.badge-critical {
+  background: rgba(255, 45, 85, 0.15);
+  border: 1px solid rgba(255, 45, 85, 0.4);
+  color: #ff2d55;
+}
+
+.badge-high {
+  background: rgba(255, 136, 0, 0.15);
+  border: 1px solid rgba(255, 136, 0, 0.4);
+  color: #ff8800;
+}
+
+.badge-medium {
+  background: rgba(255, 208, 0, 0.15);
+  border: 1px solid rgba(255, 208, 0, 0.4);
+  color: #ffd000;
+}
+
+.badge-low {
+  background: rgba(0, 230, 118, 0.15);
+  border: 1px solid rgba(0, 230, 118, 0.4);
+  color: #00e676;
+}
+
+/* ================================================================
+   NAVIGATION
+   ================================================================ */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  color: #3a5070;
+}
+
+.nav-item:hover {
+  background: rgba(0, 212, 255, 0.06);
+  border-left-color: rgba(0, 212, 255, 0.4);
+  color: #b8d0ee;
+}
+
+.nav-active {
+  background: rgba(0, 212, 255, 0.1) !important;
+  border-left-color: #00d4ff !important;
+  color: #e8f4ff !important;
+}
+
+.nav-active svg {
+  color: #00d4ff !important;
+}
+
+/* ================================================================
+   TABS
+   ================================================================ */
+.tab-btn {
+  padding: 8px 18px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #3a5070;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: -1px;
+}
+
+.tab-btn:hover {
+  color: #b8d0ee;
+}
+
+.tab-active {
+  border-bottom-color: #00d4ff !important;
+  color: #00d4ff !important;
+}
+
+/* ================================================================
+   INPUTS
+   ================================================================ */
+.fw-input {
+  width: 100%;
+  background: #0b1628;
+  border: 1px solid #142240;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #b8d0ee;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  resize: none;
+}
+
+.fw-input:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.1);
+}
+
+.fw-input::placeholder {
+  color: #3a5070;
+}
+
+/* ================================================================
+   BUTTONS
+   ================================================================ */
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 20px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid #00d4ff;
+  border-radius: 8px;
+  color: #00d4ff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: rgba(0, 212, 255, 0.15);
+  box-shadow: 0 0 16px rgba(0, 212, 255, 0.2);
+}
+
+.btn-primary:disabled {
+  background: #0f1e35;
+  border-color: #142240;
+  color: #3a5070;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: #0b1628;
+  border: 1px solid #142240;
+  border-radius: 6px;
+  color: #3a5070;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: #00d4ff44;
+  color: #b8d0ee;
+}
+
+/* ================================================================
+   TABLE
+   ================================================================ */
+.fw-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fw-table th {
+  background: #0b1628;
+  color: #3a5070;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid #142240;
+}
+
+.fw-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #142240;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: #b8d0ee;
+  transition: background 0.15s;
+}
+
+.fw-table tr:hover td {
+  background: rgba(0, 212, 255, 0.03);
+}
+
+.fw-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ================================================================
+   PROGRESS BAR
+   ================================================================ */
+.progress-track {
+  height: 5px;
+  background: #0f1e35;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1s ease;
+}
+
+/* ================================================================
+   TERMINAL
+   ================================================================ */
+.terminal-body {
+  background: rgba(0, 0, 0, 0.6);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: #00e676;
+  line-height: 1.8;
+  padding: 16px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.terminal-prompt {
+  color: #00e676;
+  opacity: 0.7;
+}
+
+.terminal-response {
+  color: #00e676;
+  opacity: 0.85;
+  padding-left: 16px;
+}
+
+.terminal-error {
+  color: #ff2d55;
+}
+
+/* ================================================================
+   SCANLINE EFFECT
+   ================================================================ */
+.scanline-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanline-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #00d4ff,
+    transparent
+  );
+  animation: scanline 3s linear infinite;
+  pointer-events: none;
+}
+
+/* ================================================================
+   GRID BACKGROUND
+   ================================================================ */
+.grid-bg {
+  background-image: linear-gradient(
+      rgba(20, 34, 64, 0.3) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(20, 34, 64, 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ================================================================
+   GLOW ORBS (Login background)
+   ================================================================ */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+.orb-cyan {
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 0.08),
+    transparent 70%
+  );
+}
+
+.orb-red {
+  background: radial-gradient(
+    circle,
+    rgba(255, 45, 85, 0.06),
+    transparent 70%
+  );
+}
+
+/* ================================================================
+   REACT FLOW (Attack Graph)
+   ================================================================ */
+.react-flow__controls button {
+  background: #0b1628 !important;
+  border-color: #142240 !important;
+  color: #b8d0ee !important;
+  transition: all 0.2s !important;
+}
+
+.react-flow__controls button:hover {
+  background: rgba(0, 212, 255, 0.08) !important;
+  border-color: rgba(0, 212, 255, 0.3) !important;
+}
+
+.react-flow__background {
+  opacity: 0.3 !important;
+}
+
+.react-flow__minimap {
+  background: #070f1e !important;
+  border: 1px solid #142240 !important;
+  border-radius: 8px !important;
+}
+
+/* ================================================================
+   UTILITY CLASSES
+   ================================================================ */
+
+/* Section label */
+.section-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #3a5070;
+  margin-bottom: 12px;
+}
+
+/* Orbitron number display */
+.orb-number {
+  font-family: "Orbitron", monospace;
+  font-weight: 900;
+}
+
+/* Mono data text */
+.mono-text {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Divider */
+.fw-divider {
+  height: 1px;
+  background: #142240;
+  margin: 12px 0;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Blink cursor */
+.cursor-blink::after {
+  content: "_";
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Status dot */
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.status-active {
+  background: #00e676;
+  box-shadow: 0 0 6px #00e676;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.status-pending {
+  background: #ffd000;
+  box-shadow: 0 0 6px #ffd000;
+}
+
+.status-error {
+  background: #ff2d55;
+  box-shadow: 0 0 6px #ff2d55;
+  animation: pulse 1s ease-in-out infinite;
+}

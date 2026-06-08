@@ -1,0 +1,200 @@
+policy_id,policy_text,intent,protocol,port,source_ip,dest_ip,source_zone,destination_zone,direction,time_constraint,exception_logic,priority,asset_sensitivity,exposure_type,risk_label,firewall_rule,source
+P010,Allow HTTPS service to web server 10,allow,tcp,443,any,10.0.1.10,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.10 -j ACCEPT,csv
+P020,Allow HTTPS service to web server 20,allow,tcp,443,any,10.0.1.20,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.20 -j ACCEPT,csv
+P030,Allow HTTPS service to web server 30,allow,tcp,443,any,10.0.1.30,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.30 -j ACCEPT,csv
+P040,Allow HTTPS service to web server 40,allow,tcp,443,any,10.0.1.40,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.40 -j ACCEPT,csv
+P050,Allow HTTPS service to web server 50,allow,tcp,443,any,10.0.1.50,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.50 -j ACCEPT,csv
+P060,Allow HTTPS service to web server 60,allow,tcp,443,any,10.0.1.60,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.60 -j ACCEPT,csv
+P070,Allow HTTPS service to web server 70,allow,tcp,443,any,10.0.1.70,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.70 -j ACCEPT,csv
+P116,Allow HTTPS to server conflict 1,allow,tcp,443,any,10.0.5.1,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.5.1 -j ACCEPT,csv
+P117,Allow HTTPS to server conflict 2,allow,tcp,443,any,10.0.5.2,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.5.2 -j ACCEPT,csv
+P118,Allow HTTPS to server conflict 3,allow,tcp,443,any,10.0.5.3,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.5.3 -j ACCEPT,csv
+P119,Allow HTTPS to server conflict 4,allow,tcp,443,any,10.0.5.4,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.5.4 -j ACCEPT,csv
+P120,Allow HTTPS to server conflict 5,allow,tcp,443,any,10.0.5.5,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.5.5 -j ACCEPT,csv
+P121,Allow HTTPS to server conflict 6,allow,tcp,443,any,10.0.5.6,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.5.6 -j ACCEPT,csv
+P122,Allow HTTPS to server conflict 7,allow,tcp,443,any,10.0.5.7,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.5.7 -j ACCEPT,csv
+P123,Allow HTTPS to server conflict 8,allow,tcp,443,any,10.0.5.8,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.5.8 -j ACCEPT,csv
+P124,Allow HTTPS to server conflict 9,allow,tcp,443,any,10.0.5.9,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.5.9 -j ACCEPT,csv
+P125,Allow HTTPS to server conflict 10,allow,tcp,443,any,10.0.5.10,public,dmz,incoming,,,1,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.5.10 -j ACCEPT,csv
+P001,Allow HTTPS service to web server 1,allow,tcp,443,10.0.0.0/24,10.0.1.1,internal,dmz,incoming,,,2,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.1 -j ACCEPT,csv
+P011,Allow HTTPS service to web server 11,allow,tcp,443,10.0.0.0/24,10.0.1.11,internal,dmz,incoming,,,2,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.11 -j ACCEPT,csv
+P021,Allow HTTPS service to web server 21,allow,tcp,443,10.0.0.0/24,10.0.1.21,internal,dmz,incoming,,,2,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.21 -j ACCEPT,csv
+P031,Allow HTTPS service to web server 31,allow,tcp,443,10.0.0.0/24,10.0.1.31,internal,dmz,incoming,,,2,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.31 -j ACCEPT,csv
+P041,Allow HTTPS service to web server 41,allow,tcp,443,10.0.0.0/24,10.0.1.41,internal,dmz,incoming,,,2,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.41 -j ACCEPT,csv
+P051,Allow HTTPS service to web server 51,allow,tcp,443,10.0.0.0/24,10.0.1.51,internal,dmz,incoming,,,2,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.51 -j ACCEPT,csv
+P061,Allow HTTPS service to web server 61,allow,tcp,443,10.0.0.0/24,10.0.1.61,internal,dmz,incoming,,,2,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.61 -j ACCEPT,csv
+P071,Allow HTTPS service to web server 71,allow,tcp,443,10.0.0.0/24,10.0.1.71,internal,dmz,incoming,,,2,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.71 -j ACCEPT,csv
+P076,Allow SSH during office hours to admin server 76,allow,tcp,22,10.0.0.0/24,10.0.2.76,internal,admin,incoming,09:00-17:00,,2,critical,restricted,low,iptables -A INPUT -p tcp --dport 22 -d 10.0.2.76 -j ACCEPT,csv
+P077,Allow SSH during office hours to admin server 77,allow,tcp,22,10.0.0.0/24,10.0.2.77,internal,admin,incoming,09:00-17:00,,2,critical,restricted,low,iptables -A INPUT -p tcp --dport 22 -d 10.0.2.77 -j ACCEPT,csv
+P078,Allow SSH during office hours to admin server 78,allow,tcp,22,10.0.0.0/24,10.0.2.78,internal,admin,incoming,09:00-17:00,,2,critical,restricted,low,iptables -A INPUT -p tcp --dport 22 -d 10.0.2.78 -j ACCEPT,csv
+P079,Allow SSH during office hours to admin server 79,allow,tcp,22,10.0.0.0/24,10.0.2.79,internal,admin,incoming,09:00-17:00,,2,critical,restricted,low,iptables -A INPUT -p tcp --dport 22 -d 10.0.2.79 -j ACCEPT,csv
+P080,Allow SSH during office hours to admin server 80,allow,tcp,22,10.0.0.0/24,10.0.2.80,internal,admin,incoming,09:00-17:00,,2,critical,restricted,low,iptables -A INPUT -p tcp --dport 22 -d 10.0.2.80 -j ACCEPT,csv
+P081,Allow SSH during office hours to admin server 81,allow,tcp,22,10.0.0.0/24,10.0.2.81,internal,admin,incoming,09:00-17:00,,2,critical,restricted,low,iptables -A INPUT -p tcp --dport 22 -d 10.0.2.81 -j ACCEPT,csv
+P082,Allow SSH during office hours to admin server 82,allow,tcp,22,10.0.0.0/24,10.0.2.82,internal,admin,incoming,09:00-17:00,,2,critical,restricted,low,iptables -A INPUT -p tcp --dport 22 -d 10.0.2.82 -j ACCEPT,csv
+P083,Allow SSH during office hours to admin server 83,allow,tcp,22,10.0.0.0/24,10.0.2.83,internal,admin,incoming,09:00-17:00,,2,critical,restricted,low,iptables -A INPUT -p tcp --dport 22 -d 10.0.2.83 -j ACCEPT,csv
+P084,Allow SSH during office hours to admin server 84,allow,tcp,22,10.0.0.0/24,10.0.2.84,internal,admin,incoming,09:00-17:00,,2,critical,restricted,low,iptables -A INPUT -p tcp --dport 22 -d 10.0.2.84 -j ACCEPT,csv
+P085,Allow SSH during office hours to admin server 85,allow,tcp,22,10.0.0.0/24,10.0.2.85,internal,admin,incoming,09:00-17:00,,2,critical,restricted,low,iptables -A INPUT -p tcp --dport 22 -d 10.0.2.85 -j ACCEPT,csv
+P002,Allow HTTPS service to web server 2,allow,tcp,443,10.0.0.0/24,10.0.1.2,internal,dmz,incoming,,,3,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.2 -j ACCEPT,csv
+P012,Allow HTTPS service to web server 12,allow,tcp,443,10.0.0.0/24,10.0.1.12,internal,dmz,incoming,,,3,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.12 -j ACCEPT,csv
+P022,Allow HTTPS service to web server 22,allow,tcp,443,10.0.0.0/24,10.0.1.22,internal,dmz,incoming,,,3,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.22 -j ACCEPT,csv
+P032,Allow HTTPS service to web server 32,allow,tcp,443,10.0.0.0/24,10.0.1.32,internal,dmz,incoming,,,3,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.32 -j ACCEPT,csv
+P042,Allow HTTPS service to web server 42,allow,tcp,443,10.0.0.0/24,10.0.1.42,internal,dmz,incoming,,,3,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.42 -j ACCEPT,csv
+P052,Allow HTTPS service to web server 52,allow,tcp,443,10.0.0.0/24,10.0.1.52,internal,dmz,incoming,,,3,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.52 -j ACCEPT,csv
+P062,Allow HTTPS service to web server 62,allow,tcp,443,10.0.0.0/24,10.0.1.62,internal,dmz,incoming,,,3,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.62 -j ACCEPT,csv
+P072,Allow HTTPS service to web server 72,allow,tcp,443,10.0.0.0/24,10.0.1.72,internal,dmz,incoming,,,3,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.72 -j ACCEPT,csv
+P086,Allow HTTPS except admin IP to server 86,allow,tcp,443,any,10.0.3.86,public,dmz,incoming,,except 192.168.1.10,3,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.3.86 -j ACCEPT,csv
+P087,Allow HTTPS except admin IP to server 87,allow,tcp,443,any,10.0.3.87,public,dmz,incoming,,except 192.168.1.10,3,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.3.87 -j ACCEPT,csv
+P088,Allow HTTPS except admin IP to server 88,allow,tcp,443,any,10.0.3.88,public,dmz,incoming,,except 192.168.1.10,3,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.3.88 -j ACCEPT,csv
+P089,Allow HTTPS except admin IP to server 89,allow,tcp,443,any,10.0.3.89,public,dmz,incoming,,except 192.168.1.10,3,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.3.89 -j ACCEPT,csv
+P090,Allow HTTPS except admin IP to server 90,allow,tcp,443,any,10.0.3.90,public,dmz,incoming,,except 192.168.1.10,3,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.3.90 -j ACCEPT,csv
+P091,Allow HTTPS except admin IP to server 91,allow,tcp,443,any,10.0.3.91,public,dmz,incoming,,except 192.168.1.10,3,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.3.91 -j ACCEPT,csv
+P092,Allow HTTPS except admin IP to server 92,allow,tcp,443,any,10.0.3.92,public,dmz,incoming,,except 192.168.1.10,3,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.3.92 -j ACCEPT,csv
+P093,Allow HTTPS except admin IP to server 93,allow,tcp,443,any,10.0.3.93,public,dmz,incoming,,except 192.168.1.10,3,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.3.93 -j ACCEPT,csv
+P094,Allow HTTPS except admin IP to server 94,allow,tcp,443,any,10.0.3.94,public,dmz,incoming,,except 192.168.1.10,3,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.3.94 -j ACCEPT,csv
+P095,Allow HTTPS except admin IP to server 95,allow,tcp,443,any,10.0.3.95,public,dmz,incoming,,except 192.168.1.10,3,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.3.95 -j ACCEPT,csv
+P003,Allow HTTPS service to web server 3,allow,tcp,443,10.0.0.0/24,10.0.1.3,internal,dmz,incoming,,,4,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.3 -j ACCEPT,csv
+P013,Allow HTTPS service to web server 13,allow,tcp,443,10.0.0.0/24,10.0.1.13,internal,dmz,incoming,,,4,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.13 -j ACCEPT,csv
+P023,Allow HTTPS service to web server 23,allow,tcp,443,10.0.0.0/24,10.0.1.23,internal,dmz,incoming,,,4,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.23 -j ACCEPT,csv
+P033,Allow HTTPS service to web server 33,allow,tcp,443,10.0.0.0/24,10.0.1.33,internal,dmz,incoming,,,4,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.33 -j ACCEPT,csv
+P043,Allow HTTPS service to web server 43,allow,tcp,443,10.0.0.0/24,10.0.1.43,internal,dmz,incoming,,,4,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.43 -j ACCEPT,csv
+P053,Allow HTTPS service to web server 53,allow,tcp,443,10.0.0.0/24,10.0.1.53,internal,dmz,incoming,,,4,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.53 -j ACCEPT,csv
+P063,Allow HTTPS service to web server 63,allow,tcp,443,10.0.0.0/24,10.0.1.63,internal,dmz,incoming,,,4,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.63 -j ACCEPT,csv
+P073,Allow HTTPS service to web server 73,allow,tcp,443,10.0.0.0/24,10.0.1.73,internal,dmz,incoming,,,4,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.73 -j ACCEPT,csv
+P004,Allow HTTPS service to web server 4,allow,tcp,443,10.0.0.0/24,10.0.1.4,internal,dmz,incoming,,,5,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.4 -j ACCEPT,csv
+P014,Allow HTTPS service to web server 14,allow,tcp,443,10.0.0.0/24,10.0.1.14,internal,dmz,incoming,,,5,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.14 -j ACCEPT,csv
+P024,Allow HTTPS service to web server 24,allow,tcp,443,10.0.0.0/24,10.0.1.24,internal,dmz,incoming,,,5,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.24 -j ACCEPT,csv
+P034,Allow HTTPS service to web server 34,allow,tcp,443,10.0.0.0/24,10.0.1.34,internal,dmz,incoming,,,5,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.34 -j ACCEPT,csv
+P044,Allow HTTPS service to web server 44,allow,tcp,443,10.0.0.0/24,10.0.1.44,internal,dmz,incoming,,,5,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.44 -j ACCEPT,csv
+P054,Allow HTTPS service to web server 54,allow,tcp,443,10.0.0.0/24,10.0.1.54,internal,dmz,incoming,,,5,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.54 -j ACCEPT,csv
+P064,Allow HTTPS service to web server 64,allow,tcp,443,10.0.0.0/24,10.0.1.64,internal,dmz,incoming,,,5,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.64 -j ACCEPT,csv
+P074,Allow HTTPS service to web server 74,allow,tcp,443,10.0.0.0/24,10.0.1.74,internal,dmz,incoming,,,5,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.74 -j ACCEPT,csv
+P096,Allow SSH from any to database 96,allow,tcp,22,any,10.0.4.96,public,database,incoming,,,5,critical,public,high,iptables -A INPUT -p tcp --dport 22 -d 10.0.4.96 -j ACCEPT,csv
+P097,Allow SSH from any to database 97,allow,tcp,22,any,10.0.4.97,public,database,incoming,,,5,critical,public,high,iptables -A INPUT -p tcp --dport 22 -d 10.0.4.97 -j ACCEPT,csv
+P098,Allow SSH from any to database 98,allow,tcp,22,any,10.0.4.98,public,database,incoming,,,5,critical,public,high,iptables -A INPUT -p tcp --dport 22 -d 10.0.4.98 -j ACCEPT,csv
+P099,Allow SSH from any to database 99,allow,tcp,22,any,10.0.4.99,public,database,incoming,,,5,critical,public,high,iptables -A INPUT -p tcp --dport 22 -d 10.0.4.99 -j ACCEPT,csv
+P100,Allow SSH from any to database 100,allow,tcp,22,any,10.0.4.100,public,database,incoming,,,5,critical,public,high,iptables -A INPUT -p tcp --dport 22 -d 10.0.4.100 -j ACCEPT,csv
+P101,Allow SSH from any to database 101,allow,tcp,22,any,10.0.4.101,public,database,incoming,,,5,critical,public,high,iptables -A INPUT -p tcp --dport 22 -d 10.0.4.101 -j ACCEPT,csv
+P102,Allow SSH from any to database 102,allow,tcp,22,any,10.0.4.102,public,database,incoming,,,5,critical,public,high,iptables -A INPUT -p tcp --dport 22 -d 10.0.4.102 -j ACCEPT,csv
+P103,Allow SSH from any to database 103,allow,tcp,22,any,10.0.4.103,public,database,incoming,,,5,critical,public,high,iptables -A INPUT -p tcp --dport 22 -d 10.0.4.103 -j ACCEPT,csv
+P104,Allow SSH from any to database 104,allow,tcp,22,any,10.0.4.104,public,database,incoming,,,5,critical,public,high,iptables -A INPUT -p tcp --dport 22 -d 10.0.4.104 -j ACCEPT,csv
+P105,Allow SSH from any to database 105,allow,tcp,22,any,10.0.4.105,public,database,incoming,,,5,critical,public,high,iptables -A INPUT -p tcp --dport 22 -d 10.0.4.105 -j ACCEPT,csv
+P005,Allow HTTPS service to web server 5,allow,tcp,443,any,10.0.1.5,public,dmz,incoming,,,6,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.5 -j ACCEPT,csv
+P015,Allow HTTPS service to web server 15,allow,tcp,443,any,10.0.1.15,public,dmz,incoming,,,6,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.15 -j ACCEPT,csv
+P025,Allow HTTPS service to web server 25,allow,tcp,443,any,10.0.1.25,public,dmz,incoming,,,6,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.25 -j ACCEPT,csv
+P035,Allow HTTPS service to web server 35,allow,tcp,443,any,10.0.1.35,public,dmz,incoming,,,6,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.35 -j ACCEPT,csv
+P045,Allow HTTPS service to web server 45,allow,tcp,443,any,10.0.1.45,public,dmz,incoming,,,6,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.45 -j ACCEPT,csv
+P055,Allow HTTPS service to web server 55,allow,tcp,443,any,10.0.1.55,public,dmz,incoming,,,6,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.55 -j ACCEPT,csv
+P065,Allow HTTPS service to web server 65,allow,tcp,443,any,10.0.1.65,public,dmz,incoming,,,6,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.65 -j ACCEPT,csv
+P075,Allow HTTPS service to web server 75,allow,tcp,443,any,10.0.1.75,public,dmz,incoming,,,6,high,public,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.75 -j ACCEPT,csv
+P006,Allow HTTPS service to web server 6,allow,tcp,443,10.0.0.0/24,10.0.1.6,internal,dmz,incoming,,,7,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.6 -j ACCEPT,csv
+P016,Allow HTTPS service to web server 16,allow,tcp,443,10.0.0.0/24,10.0.1.16,internal,dmz,incoming,,,7,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.16 -j ACCEPT,csv
+P026,Allow HTTPS service to web server 26,allow,tcp,443,10.0.0.0/24,10.0.1.26,internal,dmz,incoming,,,7,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.26 -j ACCEPT,csv
+P036,Allow HTTPS service to web server 36,allow,tcp,443,10.0.0.0/24,10.0.1.36,internal,dmz,incoming,,,7,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.36 -j ACCEPT,csv
+P046,Allow HTTPS service to web server 46,allow,tcp,443,10.0.0.0/24,10.0.1.46,internal,dmz,incoming,,,7,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.46 -j ACCEPT,csv
+P056,Allow HTTPS service to web server 56,allow,tcp,443,10.0.0.0/24,10.0.1.56,internal,dmz,incoming,,,7,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.56 -j ACCEPT,csv
+P066,Allow HTTPS service to web server 66,allow,tcp,443,10.0.0.0/24,10.0.1.66,internal,dmz,incoming,,,7,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.66 -j ACCEPT,csv
+P007,Allow HTTPS service to web server 7,allow,tcp,443,10.0.0.0/24,10.0.1.7,internal,dmz,incoming,,,8,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.7 -j ACCEPT,csv
+P017,Allow HTTPS service to web server 17,allow,tcp,443,10.0.0.0/24,10.0.1.17,internal,dmz,incoming,,,8,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.17 -j ACCEPT,csv
+P027,Allow HTTPS service to web server 27,allow,tcp,443,10.0.0.0/24,10.0.1.27,internal,dmz,incoming,,,8,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.27 -j ACCEPT,csv
+P037,Allow HTTPS service to web server 37,allow,tcp,443,10.0.0.0/24,10.0.1.37,internal,dmz,incoming,,,8,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.37 -j ACCEPT,csv
+P047,Allow HTTPS service to web server 47,allow,tcp,443,10.0.0.0/24,10.0.1.47,internal,dmz,incoming,,,8,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.47 -j ACCEPT,csv
+P057,Allow HTTPS service to web server 57,allow,tcp,443,10.0.0.0/24,10.0.1.57,internal,dmz,incoming,,,8,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.57 -j ACCEPT,csv
+P067,Allow HTTPS service to web server 67,allow,tcp,443,10.0.0.0/24,10.0.1.67,internal,dmz,incoming,,,8,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.67 -j ACCEPT,csv
+P008,Allow HTTPS service to web server 8,allow,tcp,443,10.0.0.0/24,10.0.1.8,internal,dmz,incoming,,,9,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.8 -j ACCEPT,csv
+P018,Allow HTTPS service to web server 18,allow,tcp,443,10.0.0.0/24,10.0.1.18,internal,dmz,incoming,,,9,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.18 -j ACCEPT,csv
+P028,Allow HTTPS service to web server 28,allow,tcp,443,10.0.0.0/24,10.0.1.28,internal,dmz,incoming,,,9,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.28 -j ACCEPT,csv
+P038,Allow HTTPS service to web server 38,allow,tcp,443,10.0.0.0/24,10.0.1.38,internal,dmz,incoming,,,9,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.38 -j ACCEPT,csv
+P048,Allow HTTPS service to web server 48,allow,tcp,443,10.0.0.0/24,10.0.1.48,internal,dmz,incoming,,,9,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.48 -j ACCEPT,csv
+P058,Allow HTTPS service to web server 58,allow,tcp,443,10.0.0.0/24,10.0.1.58,internal,dmz,incoming,,,9,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.58 -j ACCEPT,csv
+P068,Allow HTTPS service to web server 68,allow,tcp,443,10.0.0.0/24,10.0.1.68,internal,dmz,incoming,,,9,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.68 -j ACCEPT,csv
+P009,Allow HTTPS service to web server 9,allow,tcp,443,10.0.0.0/24,10.0.1.9,internal,dmz,incoming,,,10,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.9 -j ACCEPT,csv
+P019,Allow HTTPS service to web server 19,allow,tcp,443,10.0.0.0/24,10.0.1.19,internal,dmz,incoming,,,10,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.19 -j ACCEPT,csv
+P029,Allow HTTPS service to web server 29,allow,tcp,443,10.0.0.0/24,10.0.1.29,internal,dmz,incoming,,,10,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.29 -j ACCEPT,csv
+P039,Allow HTTPS service to web server 39,allow,tcp,443,10.0.0.0/24,10.0.1.39,internal,dmz,incoming,,,10,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.39 -j ACCEPT,csv
+P049,Allow HTTPS service to web server 49,allow,tcp,443,10.0.0.0/24,10.0.1.49,internal,dmz,incoming,,,10,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.49 -j ACCEPT,csv
+P059,Allow HTTPS service to web server 59,allow,tcp,443,10.0.0.0/24,10.0.1.59,internal,dmz,incoming,,,10,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.59 -j ACCEPT,csv
+P069,Allow HTTPS service to web server 69,allow,tcp,443,10.0.0.0/24,10.0.1.69,internal,dmz,incoming,,,10,high,restricted,medium,iptables -A INPUT -p tcp --dport 443 -d 10.0.1.69 -j ACCEPT,csv
+P106,Block all incoming traffic rule 1,deny,all,0,any,any,public,internal,incoming,,,10,high,public,low,iptables -A INPUT -j DROP,csv
+P107,Block all incoming traffic rule 2,deny,all,0,any,any,public,internal,incoming,,,10,high,public,low,iptables -A INPUT -j DROP,csv
+P108,Block all incoming traffic rule 3,deny,all,0,any,any,public,internal,incoming,,,10,high,public,low,iptables -A INPUT -j DROP,csv
+P109,Block all incoming traffic rule 4,deny,all,0,any,any,public,internal,incoming,,,10,high,public,low,iptables -A INPUT -j DROP,csv
+P110,Block all incoming traffic rule 5,deny,all,0,any,any,public,internal,incoming,,,10,high,public,low,iptables -A INPUT -j DROP,csv
+P111,Block all incoming traffic rule 6,deny,all,0,any,any,public,internal,incoming,,,10,high,public,low,iptables -A INPUT -j DROP,csv
+P112,Block all incoming traffic rule 7,deny,all,0,any,any,public,internal,incoming,,,10,high,public,low,iptables -A INPUT -j DROP,csv
+P113,Block all incoming traffic rule 8,deny,all,0,any,any,public,internal,incoming,,,10,high,public,low,iptables -A INPUT -j DROP,csv
+P114,Block all incoming traffic rule 9,deny,all,0,any,any,public,internal,incoming,,,10,high,public,low,iptables -A INPUT -j DROP,csv
+P115,Block all incoming traffic rule 10,deny,all,0,any,any,public,internal,incoming,,,10,high,public,low,iptables -A INPUT -j DROP,csv
+M1_001,Allow HTTP traffic from any source to web server on port 80,allow,tcp,80,any,192.168.1.10,external,internal,inbound,,,11,medium,public,medium,iptables -A INPUT -p tcp -d 192.168.1.10 --dport 80 -j ACCEPT,m1
+M1_002,Allow HTTPS traffic from any source to web server on port 443,allow,tcp,443,any,192.168.1.10,external,internal,inbound,,,12,medium,public,medium,iptables -A INPUT -p tcp -d 192.168.1.10 --dport 443 -j ACCEPT,m1
+M1_003,Deny all telnet connections on port 23 from external network,deny,tcp,23,0.0.0.0/0,any,external,external,inbound,,,13,low,public,low,iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 23 -j DROP,m1
+M1_005,Allow SSH access from internal network 10.0.0.0/8 only,allow,tcp,22,10.0.0.0/8,any,internal,external,inbound,,,14,high,public,medium,iptables -A INPUT -p tcp -s 10.0.0.0/8 --dport 22 -j ACCEPT,m1
+M1_006,Deny FTP traffic from external sources on port 21,deny,tcp,21,0.0.0.0/0,any,external,external,inbound,,,15,low,public,low,iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 21 -j DROP,m1
+M1_007,Allow DNS queries on port 53 from internal network,allow,udp,53,192.168.0.0/16,192.168.1.1,internal,internal,inbound,,,16,low,internal,low,iptables -A INPUT -p udp -s 192.168.0.0/16 -d 192.168.1.1 --dport 53 -j ACCEPT,m1
+M1_008,Block ICMP ping requests from unknown sources,deny,icmp,,0.0.0.0/0,any,external,external,inbound,,,17,low,public,low,iptables -A INPUT -p icmp -s 0.0.0.0/0 -j DROP,m1
+M1_009,Allow SMTP mail traffic on port 25 to mail server,allow,tcp,25,any,192.168.1.20,external,internal,inbound,,,18,medium,public,medium,iptables -A INPUT -p tcp -d 192.168.1.20 --dport 25 -j ACCEPT,m1
+M1_010,Deny all traffic from IP 203.0.113.50 permanently,deny,any,,203.0.113.50,any,external,external,inbound,,,19,low,public,low,iptables -A INPUT -s 203.0.113.50 -j DROP,m1
+M1_011,Allow database access on port 3306 from app server only,allow,tcp,3306,192.168.1.30,192.168.1.40,internal,internal,inbound,,,20,high,internal,medium,iptables -A INPUT -p tcp -s 192.168.1.30 -d 192.168.1.40 --dport 3306 -j ACCEPT,m1
+M1_012,Block all traffic on port 3306 from external networks,deny,tcp,3306,0.0.0.0/0,any,external,external,inbound,,,21,high,public,low,iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 3306 -j DROP,m1
+M1_013,Allow RDP on port 3389 from VPN subnet 172.16.0.0/12,allow,tcp,3389,172.16.0.0/12,any,internal,external,inbound,,,22,high,public,medium,iptables -A INPUT -p tcp -s 172.16.0.0/12 --dport 3389 -j ACCEPT,m1
+M1_014,Deny all RDP connections from public internet on port 3389,deny,tcp,3389,0.0.0.0/0,any,external,external,inbound,,,23,high,public,low,iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 3389 -j DROP,m1
+M1_015,Allow outbound HTTPS from internal network to internet,allow,tcp,443,192.168.0.0/16,0.0.0.0/0,internal,external,outbound,,,24,medium,public,low,iptables -A OUTPUT -p tcp -s 192.168.0.0/16 -d 0.0.0.0/0 --dport 443 -j ACCEPT,m1
+M1_016,Block outbound traffic to IP range 185.220.0.0/16,deny,any,,any,185.220.0.0/16,external,dmz,outbound,,,25,low,public,low,iptables -A OUTPUT -d 185.220.0.0/16 -j DROP,m1
+M1_017,Allow NTP time synchronization on port 123 UDP,allow,udp,123,192.168.0.0/16,any,internal,external,outbound,,,26,low,public,low,iptables -A OUTPUT -p udp -s 192.168.0.0/16 --dport 123 -j ACCEPT,m1
+M1_018,Deny all UDP traffic from external network except DNS,deny,udp,any,0.0.0.0/0,any,external,external,inbound,,port 53,27,low,public,low,iptables -A INPUT -p udp -s 0.0.0.0/0 -j DROP,m1
+M1_019,Allow LDAP traffic on port 389 from internal domain only,allow,tcp,389,10.0.0.0/8,192.168.1.50,internal,internal,inbound,,,28,high,restricted,medium,iptables -A INPUT -p tcp -s 10.0.0.0/8 -d 192.168.1.50 --dport 389 -j ACCEPT,m1
+M1_020,Block SMB traffic on port 445 from all external sources,deny,tcp,445,0.0.0.0/0,any,external,external,inbound,,,29,high,public,low,iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 445 -j DROP,m1
+M1_021,Allow SNMP queries on port 161 from monitoring server only,allow,udp,161,192.168.1.60,any,internal,external,inbound,,,30,low,public,low,iptables -A INPUT -p udp -s 192.168.1.60 --dport 161 -j ACCEPT,m1
+M1_022,Deny all traffic on port 6667 IRC protocol from internet,deny,tcp,6667,0.0.0.0/0,any,external,external,inbound,,,31,low,public,low,iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 6667 -j DROP,m1
+M1_023,Allow VPN traffic on port 1194 UDP from remote workers,allow,udp,1194,any,192.168.1.70,external,internal,inbound,,,32,medium,public,medium,iptables -A INPUT -p udp -d 192.168.1.70 --dport 1194 -j ACCEPT,m1
+M1_024,Block all traffic from known botnet IP 198.51.100.25,deny,any,,198.51.100.25,any,external,external,inbound,,,33,low,public,low,iptables -A INPUT -s 198.51.100.25 -j DROP,m1
+M1_025,Allow IMAP email on port 993 from trusted clients,allow,tcp,993,192.168.0.0/16,192.168.1.20,internal,internal,inbound,,,34,medium,internal,low,iptables -A INPUT -p tcp -s 192.168.0.0/16 -d 192.168.1.20 --dport 993 -j ACCEPT,m1
+M1_026,Deny all inbound traffic by default,deny,any,,any,any,external,external,inbound,,,35,low,public,low,iptables -A INPUT -j DROP,m1
+M1_027,Allow established and related connections through firewall,allow,tcp,any,any,any,external,external,inbound,,,36,low,public,medium,iptables -A INPUT -p tcp -j ACCEPT,m1
+M1_028,Block traffic from China IP ranges to sensitive servers,deny,any,,1.180.0.0/13,192.168.1.40,external,internal,inbound,,,37,low,internal,low,iptables -A INPUT -s 1.180.0.0/13 -d 192.168.1.40 -j DROP,m1
+M1_029,Allow Redis on port 6379 from application servers only,allow,tcp,6379,192.168.1.30,192.168.1.80,internal,internal,inbound,,,38,high,internal,medium,iptables -A INPUT -p tcp -s 192.168.1.30 -d 192.168.1.80 --dport 6379 -j ACCEPT,m1
+M1_030,Deny Elasticsearch access on port 9200 from public internet,deny,tcp,9200,0.0.0.0/0,any,external,external,inbound,,,39,high,public,low,iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 9200 -j DROP,m1
+M1_031,Allow backup traffic on port 9090 during maintenance window only between 02:00 and 04:00,allow,tcp,9090,192.168.1.90,192.168.1.100,internal,internal,inbound,02:00-04:00,,40,low,internal,low,iptables -A INPUT -p tcp -s 192.168.1.90 -d 192.168.1.100 --dport 9090 -j ACCEPT,m1
+M1_032,Block all admin panel access on port 8080 outside business hours 09:00 to 18:00,deny,tcp,8080,any,192.168.1.10,external,internal,inbound,!09:00-18:00,,41,medium,public,low,iptables -A INPUT -p tcp -d 192.168.1.10 --dport 8080 -j DROP,m1
+M1_033,Allow database sync on port 5432 only between midnight and 06:00,allow,tcp,5432,192.168.1.110,192.168.1.40,internal,internal,inbound,00:00-06:00,,42,high,internal,medium,iptables -A INPUT -p tcp -s 192.168.1.110 -d 192.168.1.40 --dport 5432 -j ACCEPT,m1
+M1_034,Deny all external SSH access after 22:00 and before 06:00,deny,tcp,22,0.0.0.0/0,any,external,external,inbound,22:00-06:00,,43,high,public,low,iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 22 -j DROP,m1
+M1_035,Allow log shipping on port 514 UDP during off-peak hours between 23:00 and 05:00,allow,udp,514,192.168.0.0/16,10.0.0.5,internal,internal,outbound,23:00-05:00,,44,low,internal,low,iptables -A OUTPUT -p udp -s 192.168.0.0/16 -d 10.0.0.5 --dport 514 -j ACCEPT,m1
+M1_036,Block all patch update downloads on weekends from 00:00 to 23:59,deny,tcp,80,any,0.0.0.0/0,external,external,outbound,weekend,,45,medium,public,low,iptables -A OUTPUT -p tcp -d 0.0.0.0/0 --dport 80 -j DROP,m1
+M1_037,Allow monitoring traffic on port 5666 during business hours 08:00 to 20:00,allow,tcp,5666,192.168.1.60,any,internal,external,inbound,08:00-20:00,,46,low,public,low,iptables -A INPUT -p tcp -s 192.168.1.60 --dport 5666 -j ACCEPT,m1
+M1_038,Deny all user traffic to admin subnet after 19:00,deny,any,,192.168.10.0/24,192.168.1.0/24,internal,internal,inbound,19:00-23:59,,47,low,internal,low,iptables -A INPUT -s 192.168.10.0/24 -d 192.168.1.0/24 -j DROP,m1
+M1_039,Allow vulnerability scanner access between 01:00 and 03:00 only,allow,tcp,any,192.168.1.120,any,internal,external,inbound,01:00-03:00,,48,low,public,low,iptables -A INPUT -p tcp -s 192.168.1.120 -j ACCEPT,m1
+M1_040,Block traffic to production servers during deployment window 14:00 to 15:00,deny,tcp,any,any,192.168.1.10,external,internal,inbound,14:00-15:00,,49,low,public,low,iptables -A INPUT -p tcp -d 192.168.1.10 -j DROP,m1
+M1_041,Allow all traffic from IP 10.0.0.1 except on port 22,allow,any,any,10.0.0.1,any,internal,external,inbound,,port 22,50,low,public,low,iptables -A INPUT -s 10.0.0.1 -j ACCEPT,m1
+M1_042,Deny all outbound traffic except HTTP and HTTPS on ports 80 and 443,deny,tcp,any,any,any,external,external,outbound,,"port 80, port 443",51,low,public,low,iptables -A OUTPUT -p tcp -j DROP,m1
+M1_043,Allow internal traffic from 192.168.0.0/16 except to DMZ subnet 192.168.99.0/24,allow,any,any,192.168.0.0/16,any,internal,external,inbound,,dest 192.168.99.0/24,52,low,public,low,iptables -A INPUT -s 192.168.0.0/16 -j ACCEPT,m1
+M1_044,Block all ICMP except ping from monitoring server 192.168.1.60,deny,icmp,,any,any,external,external,inbound,,source 192.168.1.60,53,low,public,low,iptables -A INPUT -p icmp -j DROP,m1
+M1_045,Allow HTTP but deny access to admin path on port 80 from external,allow,tcp,80,0.0.0.0/0,192.168.1.10,external,internal,inbound,,path /admin,54,medium,public,medium,iptables -A INPUT -p tcp -s 0.0.0.0/0 -d 192.168.1.10 --dport 80 -j ACCEPT,m1
+M1_046,Deny all traffic from subnet 10.10.0.0/16 except DNS on port 53,deny,any,any,10.10.0.0/16,any,internal,external,inbound,,port 53,55,low,public,low,iptables -A INPUT -s 10.10.0.0/16 -j DROP,m1
+M1_047,Allow all management traffic except from unauthenticated users,allow,tcp,8443,10.0.0.0/8,192.168.1.1,internal,internal,inbound,,unauthenticated,56,medium,restricted,low,iptables -A INPUT -p tcp -s 10.0.0.0/8 -d 192.168.1.1 --dport 8443 -j ACCEPT,m1
+M1_048,Block all downloads on port 21 except for user group ftpadmins,deny,tcp,21,any,192.168.1.130,external,internal,inbound,,group ftpadmins,57,low,public,low,iptables -A INPUT -p tcp -d 192.168.1.130 --dport 21 -j DROP,m1
+M1_049,Allow traffic on all ports except 23 telnet and 6667 IRC from trusted networks,allow,tcp,any,10.0.0.0/8,any,internal,external,inbound,,"port 23, port 6667",58,low,public,low,iptables -A INPUT -p tcp -s 10.0.0.0/8 -j ACCEPT,m1
+M1_050,Deny all SMB traffic except from domain controllers 192.168.1.50 and 192.168.1.51,deny,tcp,445,any,any,external,external,inbound,,"source 192.168.1.50, source 192.168.1.51",59,high,public,low,iptables -A INPUT -p tcp --dport 445 -j DROP,m1
+M1_051,Allow UDP traffic on port 5353 for mDNS within local subnet,allow,udp,5353,192.168.0.0/24,224.0.0.251,internal,dmz,inbound,,,60,low,internal,low,iptables -A INPUT -p udp -s 192.168.0.0/24 -d 224.0.0.251 --dport 5353 -j ACCEPT,m1
+M1_052,Block all incoming connections on ports 137 to 139 NetBIOS,deny,tcp,137-139,0.0.0.0/0,any,external,external,inbound,,,61,low,public,low,iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 137-139 -j DROP,m1
+M1_053,Allow Kafka messaging on port 9092 from microservice subnet,allow,tcp,9092,192.168.5.0/24,192.168.1.140,internal,internal,inbound,,,62,medium,internal,low,iptables -A INPUT -p tcp -s 192.168.5.0/24 -d 192.168.1.140 --dport 9092 -j ACCEPT,m1
+M1_054,Deny all traffic to honeypot server 192.168.99.100 and log,deny,any,,any,192.168.99.100,external,internal,inbound,,,63,low,public,low,iptables -A INPUT -d 192.168.99.100 -j DROP,m1
+M1_055,Allow gRPC traffic on port 50051 from service mesh only,allow,tcp,50051,192.168.6.0/24,any,internal,external,inbound,,,64,medium,public,low,iptables -A INPUT -p tcp -s 192.168.6.0/24 --dport 50051 -j ACCEPT,m1
+M1_056,Block all traffic from TOR exit node IP 185.220.101.0/24,deny,any,,185.220.101.0/24,any,external,external,inbound,,,65,low,public,low,iptables -A INPUT -s 185.220.101.0/24 -j DROP,m1
+M1_057,Allow Prometheus metrics scraping on port 9090 from monitoring subnet,allow,tcp,9090,192.168.7.0/24,any,internal,external,inbound,,,66,low,public,low,iptables -A INPUT -p tcp -s 192.168.7.0/24 --dport 9090 -j ACCEPT,m1
+M1_058,Deny all connections to port 8888 Jupyter notebook from public internet,deny,tcp,8888,0.0.0.0/0,any,external,external,inbound,,,67,low,public,low,iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 8888 -j DROP,m1
+M1_059,Allow Jenkins CI traffic on port 8080 from developer subnet only,allow,tcp,8080,192.168.8.0/24,192.168.1.150,internal,internal,inbound,,,68,medium,internal,low,iptables -A INPUT -p tcp -s 192.168.8.0/24 -d 192.168.1.150 --dport 8080 -j ACCEPT,m1
+M1_060,Block all traffic from known malware C2 server 45.33.32.156,deny,any,,45.33.32.156,any,external,external,inbound,,,69,low,public,low,iptables -A INPUT -s 45.33.32.156 -j DROP,m1
+M1_061,Allow Kubernetes API on port 6443 from control plane only,allow,tcp,6443,192.168.9.0/24,192.168.1.160,internal,internal,inbound,,,70,high,internal,medium,iptables -A INPUT -p tcp -s 192.168.9.0/24 -d 192.168.1.160 --dport 6443 -j ACCEPT,m1
+M1_062,Deny all traffic to port 2375 Docker API from any network,deny,tcp,2375,any,any,external,external,inbound,,,71,high,public,low,iptables -A INPUT -p tcp --dport 2375 -j DROP,m1
+M1_063,Allow HTTPS to CDN endpoint 104.16.0.0/12 from clients,allow,tcp,443,192.168.0.0/16,104.16.0.0/12,internal,dmz,outbound,,,72,medium,internal,low,iptables -A OUTPUT -p tcp -s 192.168.0.0/16 -d 104.16.0.0/12 --dport 443 -j ACCEPT,m1
+M1_064,Block all outbound traffic on port 25 SMTP except from mail relay,deny,tcp,25,any,any,external,external,outbound,,source 192.168.1.20,73,medium,public,low,iptables -A OUTPUT -p tcp --dport 25 -j DROP,m1
+M1_065,Allow TFTP on port 69 UDP from network boot servers only,allow,udp,69,192.168.1.170,any,internal,external,inbound,,,74,low,public,low,iptables -A INPUT -p udp -s 192.168.1.170 --dport 69 -j ACCEPT,m1
+M1_066,Deny all traffic from guest VLAN to management VLAN,deny,any,,192.168.20.0/24,192.168.1.0/24,internal,internal,inbound,,,75,low,internal,low,iptables -A INPUT -s 192.168.20.0/24 -d 192.168.1.0/24 -j DROP,m1
+M1_067,Allow RADIUS authentication on port 1812 from NAS devices,allow,udp,1812,192.168.11.0/24,192.168.1.180,internal,internal,inbound,,,76,low,internal,low,iptables -A INPUT -p udp -s 192.168.11.0/24 -d 192.168.1.180 --dport 1812 -j ACCEPT,m1
+M1_068,Block outbound DNS over port 853 TLS except to trusted resolvers,deny,tcp,853,any,any,external,external,outbound,,"dest 1.1.1.1, dest 8.8.8.8",77,low,public,low,iptables -A OUTPUT -p tcp --dport 853 -j DROP,m1
+M1_069,Allow OSPF routing protocol traffic between routers 10.0.0.1 and 10.0.0.2,allow,ospf,,10.0.0.1,10.0.0.2,internal,internal,inbound,,,78,low,restricted,low,iptables -A INPUT -p ospf -s 10.0.0.1 -d 10.0.0.2 -j ACCEPT,m1
+M1_070,Deny all multicast traffic from 224.0.0.0/4 on external interface,deny,any,,224.0.0.0/4,any,external,external,inbound,,,79,low,public,low,iptables -A INPUT -s 224.0.0.0/4 -j DROP,m1
+M1_071,Allow Grafana dashboard on port 3000 from internal users only,allow,tcp,3000,192.168.0.0/16,192.168.1.190,internal,internal,inbound,,,80,medium,internal,low,iptables -A INPUT -p tcp -s 192.168.0.0/16 -d 192.168.1.190 --dport 3000 -j ACCEPT,m1
+M1_072,Deny all traffic from IP range 91.108.0.0/16,deny,any,,91.108.0.0/16,any,external,external,inbound,,,81,low,public,low,iptables -A INPUT -s 91.108.0.0/16 -j DROP,m1
+M1_073,Allow HTTPS API calls on port 443 from partner network 172.31.0.0/16,allow,tcp,443,172.31.0.0/16,192.168.1.200,internal,internal,inbound,,,82,medium,internal,low,iptables -A INPUT -p tcp -s 172.31.0.0/16 -d 192.168.1.200 --dport 443 -j ACCEPT,m1
+M1_074,Block all traffic to port 27017 MongoDB from outside application tier,deny,tcp,27017,0.0.0.0/0,any,external,external,inbound,,source 192.168.1.30,83,high,public,low,iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 27017 -j DROP,m1
+M1_075,Allow HTTPS traffic on port 8443 from load balancer to backend,allow,tcp,8443,192.168.1.210,192.168.1.220,internal,internal,inbound,,,84,medium,internal,low,iptables -A INPUT -p tcp -s 192.168.1.210 -d 192.168.1.220 --dport 8443 -j ACCEPT,m1
