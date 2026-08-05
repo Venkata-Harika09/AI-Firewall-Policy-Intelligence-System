@@ -81,10 +81,13 @@ function DashboardLayout({
         {/* Page Content */}
         <div
           style={{
-            flex: 1,
-            overflowY: "auto",
-            overflowX: "hidden",
-          }}
+                   flex: 1,
+                   overflow: "auto",
+                   padding: "16px",
+                   boxSizing: "border-box",
+                   minWidth: 0,
+                   minHeight: 0,
+                }}
         >
           <Routes>
             <Route
